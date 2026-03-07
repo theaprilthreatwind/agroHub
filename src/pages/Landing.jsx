@@ -4,51 +4,6 @@ const Landing = () => {
   return (
     <main>
       <div class="text-gray-800 antialiased">
-        <nav class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-gray-200/50">
-          <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-              <a href="index.html" class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center">
-                  <i data-lucide="leaf" class="w-5 h-5 text-white"></i>
-                </div>
-                <span class="text-xl font-semibold tracking-tight text-gray-900">
-                  AgroHub
-                </span>
-              </a>
-
-              <div class="hidden md:flex items-center gap-8">
-                <a
-                  href="index.html"
-                  class="text-sm font-medium text-gray-600 hover:text-emerald-600 transition-colors"
-                >
-                  Каталог
-                </a>
-                <a
-                  href="about.html"
-                  class="text-sm font-medium text-emerald-600"
-                >
-                  О нас
-                </a>
-                <a
-                  href="presentation.html"
-                  class="text-sm font-medium text-gray-600 hover:text-emerald-600 transition-colors"
-                >
-                  Для инвесторов
-                </a>
-              </div>
-
-              <div class="flex items-center gap-4">
-                <a
-                  href="index.html"
-                  class="px-4 py-2 bg-emerald-600 text-white text-sm font-medium rounded-full hover:bg-emerald-700 transition-colors"
-                >
-                  Перейти в магазин
-                </a>
-              </div>
-            </div>
-          </div>
-        </nav>
-
         <section class="pt-32 pb-20 px-6 relative overflow-hidden">
           <div class="absolute top-40 left-10 w-72 h-72 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 float-animation"></div>
           <div
@@ -66,7 +21,7 @@ const Landing = () => {
 
             <h1 class="fade-in-up delay-100 text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
               От поля <br />
-              <span class="gradient-text">к вашему столу</span>
+              <span class="linear-text">к вашему столу</span>
             </h1>
 
             <p class="fade-in-up delay-200 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-10">
@@ -115,10 +70,26 @@ const Landing = () => {
             <div class="grid md:grid-cols-3 gap-8">
               <div class="group p-8 rounded-3xl bg-gray-50 hover:bg-emerald-50 transition-all duration-300 border border-transparent hover:border-emerald-100">
                 <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 transition-colors">
-                  <i
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                     data-lucide="truck"
-                    class="w-7 h-7 text-emerald-600 group-hover:text-white transition-colors"
-                  ></i>
+                    aria-hidden="true"
+                    class="lucide lucide-truck w-7 h-7 text-emerald-600 group-hover:text-white transition-colors"
+                  >
+                    <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+                    <path d="M15 18H9"></path>
+                    <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+                    <circle cx="17" cy="18" r="2"></circle>
+                    <circle cx="7" cy="18" r="2"></circle>
+                  </svg>
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3">
                   Доставляем свежее
@@ -131,10 +102,23 @@ const Landing = () => {
 
               <div class="group p-8 rounded-3xl bg-gray-50 hover:bg-emerald-50 transition-all duration-300 border border-transparent hover:border-emerald-100">
                 <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 transition-colors">
-                  <i
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                     data-lucide="shield-check"
-                    class="w-7 h-7 text-emerald-600 group-hover:text-white transition-colors"
-                  ></i>
+                    aria-hidden="true"
+                    class="lucide lucide-shield-check w-7 h-7 text-emerald-600 group-hover:text-white transition-colors"
+                  >
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                    <path d="m9 12 2 2 4-4"></path>
+                  </svg>
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3">
                   Проверяем качество
@@ -147,10 +131,22 @@ const Landing = () => {
 
               <div class="group p-8 rounded-3xl bg-gray-50 hover:bg-emerald-50 transition-all duration-300 border border-transparent hover:border-emerald-100">
                 <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 transition-colors">
-                  <i
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                     data-lucide="heart-handshake"
-                    class="w-7 h-7 text-emerald-600 group-hover:text-white transition-colors"
-                  ></i>
+                    aria-hidden="true"
+                    class="lucide lucide-heart-handshake w-7 h-7 text-emerald-600 group-hover:text-white transition-colors"
+                  >
+                    <path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"></path>
+                  </svg>
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3">
                   Поддерживаем сёла
@@ -209,16 +205,55 @@ const Landing = () => {
                     </p>
                   </div>
                 </div>
-                <div class="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center z-10 shadow-lg shadow-emerald-200 flex-shrink-0">
-                  <i data-lucide="smartphone" class="w-8 h-8 text-white"></i>
+                <div class="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center z-10 shadow-lg shadow-emerald-200 shrink-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    data-lucide="smartphone"
+                    aria-hidden="true"
+                    class="lucide lucide-smartphone w-8 h-8 text-white"
+                  >
+                    <rect
+                      width="14"
+                      height="20"
+                      x="5"
+                      y="2"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <path d="M12 18h.01"></path>
+                  </svg>
                 </div>
                 <div class="flex-1 hidden md:block"></div>
               </div>
 
               <div class="flex flex-col md:flex-row items-center gap-8 mb-16">
                 <div class="flex-1 hidden md:block"></div>
-                <div class="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center z-10 shadow-lg shadow-emerald-200 flex-shrink-0">
-                  <i data-lucide="credit-card" class="w-8 h-8 text-white"></i>
+                <div class="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center z-10 shadow-lg shadow-emerald-200 shrink-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    data-lucide="credit-card"
+                    aria-hidden="true"
+                    class="lucide lucide-credit-card w-8 h-8 text-white"
+                  >
+                    <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+                    <line x1="2" x2="22" y1="10" y2="10"></line>
+                  </svg>
                 </div>
                 <div class="flex-1">
                   <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
@@ -245,16 +280,48 @@ const Landing = () => {
                     </p>
                   </div>
                 </div>
-                <div class="w-16 h-16 bg-emerald-400 rounded-full flex items-center justify-center z-10 shadow-lg shadow-emerald-200 flex-shrink-0">
-                  <i data-lucide="map-pin" class="w-8 h-8 text-white"></i>
+                <div class="w-16 h-16 bg-emerald-400 rounded-full flex items-center justify-center z-10 shadow-lg shadow-emerald-200 shrink-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    data-lucide="map-pin"
+                    aria-hidden="true"
+                    class="lucide lucide-map-pin w-8 h-8 text-white"
+                  >
+                    <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
                 </div>
                 <div class="flex-1 hidden md:block"></div>
               </div>
 
               <div class="flex flex-col md:flex-row items-center gap-8">
                 <div class="flex-1 hidden md:block"></div>
-                <div class="w-16 h-16 bg-emerald-300 rounded-full flex items-center justify-center z-10 shadow-lg shadow-emerald-200 flex-shrink-0">
-                  <i data-lucide="home" class="w-8 h-8 text-white"></i>
+                <div class="w-16 h-16 bg-emerald-300 rounded-full flex items-center justify-center z-10 shadow-lg shadow-emerald-200 shrink-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    data-lucide="home"
+                    aria-hidden="true"
+                    class="lucide lucide-home w-8 h-8 text-white"
+                  >
+                    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+                    <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                  </svg>
                 </div>
                 <div class="flex-1">
                   <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
@@ -277,8 +344,7 @@ const Landing = () => {
             <div
               class="absolute inset-0"
               style={{
-                backgroundImage:
-                  "radial-gradient(#10b981 1px, transparent 1px)",
+                backgroundImage: "radial-linear(#10b981 1px, transparent 1px)",
                 backgroundSize: "30px 30px",
               }}
             ></div>
@@ -298,25 +364,27 @@ const Landing = () => {
 
             <div class="grid md:grid-cols-3 gap-8 mb-12">
               <div class="text-center p-6 rounded-2xl bg-emerald-800/50 border border-emerald-700">
-                <div class="w-20 h-20 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
-                  МН
-                </div>
+                <img
+                  src="/picture/Miron.jpg"
+                  className="w-60 h-60 bg-linear-to-br from-purple-400 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold"
+                />
                 <h4 class="text-lg font-semibold">Найданов Мирон</h4>
                 <p class="text-emerald-300 text-sm">Backend Architect</p>
               </div>
 
               <div class="text-center p-6 rounded-2xl bg-emerald-800/50 border border-emerald-700">
-                <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
-                  ДС
-                </div>
+                <img
+                  src="/picture/Danya.jpg"
+                  className="w-60 h-60 bg-linear-to-br from-purple-400 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold"
+                />
                 <h4 class="text-lg font-semibold">Сагындыков Даниар</h4>
                 <p class="text-emerald-300 text-sm">Frontend Architect</p>
               </div>
-
               <div class="text-center p-6 rounded-2xl bg-emerald-800/50 border border-emerald-700">
-                <div class="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold">
-                  БШ
-                </div>
+                <img
+                  src="/picture/Beibarys.jpg"
+                  className="w-60 h-60 bg-linear-to-br from-purple-400 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center text-2xl font-bold"
+                />
                 <h4 class="text-lg font-semibold">Шалдыкенов Бейбарыс</h4>
                 <p class="text-emerald-300 text-sm">Product Manager</p>
               </div>
@@ -351,7 +419,24 @@ const Landing = () => {
                 class="px-8 py-4 bg-emerald-600 text-white font-medium rounded-2xl hover:bg-emerald-700 transition-colors flex items-center gap-2"
               >
                 <span>Перейти в магазин</span>
-                <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  data-lucide="shopping-bag"
+                  aria-hidden="true"
+                  class="lucide lucide-shopping-bag w-5 h-5"
+                >
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  <path d="M3.103 6.034h17.794"></path>
+                  <path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path>
+                </svg>
               </a>
               <a
                 href="presentation.html"
@@ -368,7 +453,23 @@ const Landing = () => {
             <div class="flex flex-col md:flex-row justify-between items-center gap-4">
               <div class="flex items-center gap-2">
                 <div class="w-6 h-6 bg-emerald-600 rounded-md flex items-center justify-center">
-                  <i data-lucide="leaf" class="w-4 h-4 text-white"></i>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    data-lucide="leaf"
+                    aria-hidden="true"
+                    class="lucide lucide-leaf w-4 h-4 text-white"
+                  >
+                    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+                    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                  </svg>
                 </div>
                 <span class="font-semibold text-gray-900">AgroHub</span>
               </div>
@@ -398,8 +499,6 @@ const Landing = () => {
             </div>
           </div>
         </footer>
-
-        <script>lucide.createIcons();</script>
       </div>
     </main>
   );
