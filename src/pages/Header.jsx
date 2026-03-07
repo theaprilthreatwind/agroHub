@@ -1,10 +1,10 @@
 import React from "react";
-
+import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <header className="nav">
       <div className="nav-container">
-        <a href="index.html" className="logo">
+        <a href="#" className="logo">
           <div class="w-8 h-8 bg-emerald-600 rounded-lg flex items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -27,15 +27,20 @@ const Header = () => {
           <span>AgroHub</span>
         </a>
         <div className="nav-links">
-          <a href="">Каталог</a>
-          <a href="" className="active">
-            О нас
-          </a>
-          <a href="">Для инвесторов</a>
+          <NavLink to="/catalog">Каталог</NavLink>
+          <NavLink to="/">О нас</NavLink>
         </div>
-        <a href="" className="btn-primary">
-          Перейти в магазин
-        </a>
+        <div className="flex gap-3">
+          <NavLink to="/login" className="btn-primary">
+            Войти
+          </NavLink>
+          <NavLink
+            to="/register"
+            className="border border-emerald-600 px-4 py-2 rounded-3xl"
+          >
+            Зарегистрироваться
+          </NavLink>
+        </div>
       </div>
     </header>
   );

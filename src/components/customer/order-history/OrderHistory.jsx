@@ -1,4 +1,5 @@
 import { ProductCard } from "../../../entities";
+import { GlassPaneLayout } from "../../../shared";
 
 const exampleData = [
   {
@@ -29,7 +30,7 @@ const exampleData = [
 
 export function OrderHistory() {
   return (
-    <div className="glass-panel rounded-3xl p-8 border border-gray-100">
+    <GlassPaneLayout>
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-bold text-gray-900">Последние покупки</h2>
         <a
@@ -57,7 +58,7 @@ export function OrderHistory() {
         </a>
       </div>
 
-      <div className="space-y-4">
+      <div className="flex gap-6">
         {exampleData.map((value, index) => (
           <ProductCard
             key={index}
@@ -70,6 +71,6 @@ export function OrderHistory() {
           ></ProductCard>
         ))}
       </div>
-    </div>
+    </GlassPaneLayout>
   );
 }

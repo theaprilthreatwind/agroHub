@@ -1,5 +1,6 @@
 import React from "react";
-
+import { ArrowRight } from "../shared";
+import { NavLink } from "react-router-dom";
 const Landing = () => {
   return (
     <main>
@@ -31,13 +32,13 @@ const Landing = () => {
             </p>
 
             <div class="fade-in-up delay-300 flex flex-wrap justify-center gap-4">
-              <a
-                href="index.html"
-                class="px-8 py-4 bg-emerald-600 text-white font-medium rounded-2xl hover:bg-emerald-700 transition-all hover:shadow-lg hover:shadow-emerald-200 flex items-center gap-2"
+              <NavLink
+                to="/catalog"
+                className="px-8 py-4 bg-emerald-600 text-white font-medium rounded-2xl hover:bg-emerald-700 transition-all hover:shadow-lg hover:shadow-emerald-200 flex items-center gap-2"
               >
                 <span>Начать покупать</span>
-                <i data-lucide="arrow-right" class="w-5 h-5"></i>
-              </a>
+                <ArrowRight />
+              </NavLink>
               <button
                 onclick="
                         document

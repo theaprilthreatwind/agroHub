@@ -4,9 +4,5 @@ export function GlassPaneLayout({ children, className, ...props }) {
     className,
   ].join(" ");
 
-  return (
-    <div className={classNames}>
-      {children}
-    </div>
-  );
+  return <div className={classNames}>{children}</div>;
 }

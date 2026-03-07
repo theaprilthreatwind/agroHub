@@ -5,6 +5,9 @@ import "./App.css";
 import Header from "../pages/Header";
 import Landing from "../pages/Landing";
 import { CustomerHome } from "../pages/CustomerHome";
+import { SellerHome } from "../pages/SellerHome";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 export default function App() {
   return (
@@ -25,6 +28,33 @@ export default function App() {
             <>
               <Header />
               <CustomerHome />
+            </>
+          }
+        />
+        <Route
+          path="/seller"
+          element={
+            <>
+              <Header />
+              <SellerHome />
+            </>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <>
+              <Header />
+              <Login />
+            </>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <>
+              <Header />
+              <Register />
             </>
           }
         />
