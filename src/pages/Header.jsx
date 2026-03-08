@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 const Header = () => {
-<<<<<<< Updated upstream
   return (
     <header className="nav">
       <div className="nav-container">
@@ -45,26 +44,6 @@ const Header = () => {
       </div>
     </header>
   );
-=======
-
-    return (
-        <header className="nav">
-            <div className="nav-container">
-                <a href="index.html" className="logo">
-                <div className="logo-icon">🌿</div>
-                <span>AgroHub</span>
-                </a>
-                <div className="nav-links">
-                <a href="/Catalog">Каталог</a>
-                <a href="" className="active">О нас</a>
-                <a href="">Для инвесторов</a>
-                </div>
-                <a href="/Register" className="btn-primary">Зарегистрироваться</a>
-            </div>
-        </header>
-    );
-
->>>>>>> Stashed changes
 };
 
 export default Header;
