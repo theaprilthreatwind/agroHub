@@ -5,9 +5,15 @@ import "./App.css";
 import Header from "../pages/Header";
 import Landing from "../pages/Landing";
 import { CustomerHome } from "../pages/CustomerHome";
+<<<<<<< Updated upstream
 import { SellerHome } from "../pages/SellerHome";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+=======
+import Register from "../pages/Register";
+import Login from "../pages/Login";
+import Catalog from "../pages/Catalog";
+>>>>>>> Stashed changes
 
 export default function App() {
   return (
@@ -31,6 +37,7 @@ export default function App() {
             </>
           }
         />
+<<<<<<< Updated upstream
         <Route
           path="/seller"
           element={
@@ -58,6 +65,13 @@ export default function App() {
             </>
           }
         />
+=======
+
+        <Route path="/Catalog" element={<Catalog/>}/> 
+
+        <Route path="/Register" element={<Register />} />
+         <Route path="/Login" element={<Login />} />
+>>>>>>> Stashed changes
       </Routes>
     </BrowserRouter>
   );

@@ -66,7 +66,7 @@ const Login = () => {
 
                 <div className="register-box">
 
-                    <h2>Registration</h2>
+                    <h2>Логирование</h2>
 
                     <div className="role-switch">
                         <button
@@ -123,7 +123,7 @@ const Login = () => {
                         {success && <p className="success">{success}</p>}
 
                         <button type="submit" disabled={loading}>
-                            {loading ? "Регистрация..." : "Зарегистрироваться"}
+                            {loading ? "Логирование..." : "Логирование"}
                         </button>
 
                     </form>

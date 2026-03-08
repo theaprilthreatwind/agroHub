@@ -1,10 +1,21 @@
 import React from "react";
+<<<<<<< Updated upstream
 import { ArrowRight } from "../shared";
 import { NavLink } from "react-router-dom";
+=======
+
+import { FaArrowRight } from "react-icons/fa6";
+import { HiOutlineTruck } from "react-icons/hi";
+
+>>>>>>> Stashed changes
 const Landing = () => {
   return (
     <main>
       <div class="text-gray-800 antialiased">
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
         <section class="pt-32 pb-20 px-6 relative overflow-hidden">
           <div class="absolute top-40 left-10 w-72 h-72 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 float-animation"></div>
           <div
@@ -22,7 +33,11 @@ const Landing = () => {
 
             <h1 class="fade-in-up delay-100 text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight">
               От поля <br />
+<<<<<<< Updated upstream
               <span class="linear-text">к вашему столу</span>
+=======
+              <h1 className="span-h1">к вашему столу</h1>
+>>>>>>> Stashed changes
             </h1>
 
             <p class="fade-in-up delay-200 text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed mb-10">
@@ -37,8 +52,13 @@ const Landing = () => {
                 className="px-8 py-4 bg-emerald-600 text-white font-medium rounded-2xl hover:bg-emerald-700 transition-all hover:shadow-lg hover:shadow-emerald-200 flex items-center gap-2"
               >
                 <span>Начать покупать</span>
+<<<<<<< Updated upstream
                 <ArrowRight />
               </NavLink>
+=======
+                <FaArrowRight />
+              </a>
+>>>>>>> Stashed changes
               <button
                 onclick="
                         document
@@ -71,6 +91,7 @@ const Landing = () => {
             <div class="grid md:grid-cols-3 gap-8">
               <div class="group p-8 rounded-3xl bg-gray-50 hover:bg-emerald-50 transition-all duration-300 border border-transparent hover:border-emerald-100">
                 <div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 transition-colors">
+<<<<<<< Updated upstream
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -91,6 +112,8 @@ const Landing = () => {
                     <circle cx="17" cy="18" r="2"></circle>
                     <circle cx="7" cy="18" r="2"></circle>
                   </svg>
+=======
+>>>>>>> Stashed changes
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 mb-3">
                   Доставляем свежее
@@ -495,7 +518,7 @@ const Landing = () => {
                 </a>
               </div>
               <div class="text-sm text-gray-400">
-                © 2024 AgroHub. YouCanCode Team.
+                © 2026 AgroHub. YouCanCode Team.
               </div>
             </div>
           </div>

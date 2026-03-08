@@ -32,7 +32,7 @@ const Register = () => {
         e.preventDefault();
 
         if (!form.name || !form.email || !form.password) {
-            setError("Please, fill all fields");
+            setError("Пожалуйста, заполните все поля");
             return;
         }
 
@@ -42,7 +42,7 @@ const Register = () => {
         }
 
         if (form.password.length < 8) {
-            setError("Password must be 8 symbols");
+            setError("Пароль должен содержать не менее 8 символов");
             return;
         }
 
@@ -78,7 +78,7 @@ const Register = () => {
 
                 <div className="register-box">
 
-                    <h2>Registration</h2>
+                    <h2>Регистрация</h2>
 
                     <div className="role-switch">
                         <button
