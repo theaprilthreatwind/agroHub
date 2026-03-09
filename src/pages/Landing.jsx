@@ -171,7 +171,9 @@ const Landing = () => {
               </div>
               <div className="text-center">
                 <p className="text-4xl font-black text-emerald-600">12%</p>
-                <p className="text-gray-600 mt-2">Комиссия vs 40% у посредников</p>
+                <p className="text-gray-600 mt-2">
+                  Комиссия vs 40% у посредников
+                </p>
               </div>
             </div>
           </div>
@@ -392,11 +394,14 @@ const Landing = () => {
             </div>
 
             <div className="glass-card bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-emerald-700">
-              <h3 className="text-2xl font-bold mb-4 text-center">Наша миссия</h3>
+              <h3 className="text-2xl font-bold mb-4 text-center">
+                Наша миссия
+              </h3>
               <p className="text-lg text-emerald-100 text-center leading-relaxed">
                 Создать экосистему, где
                 <span className="text-white font-semibold">
-                  {" "}253 785 фермерских хозяйств{" "}
+                  {" "}
+                  253 785 фермерских хозяйств{" "}
                 </span>
                 Казахстана получают прямой доступ к покупателям, а горожане едят
                 натуральные продукты по справедливым ценам. Без посредников. Без
@@ -439,12 +444,13 @@ const Landing = () => {
                   <path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path>
                 </svg>
               </a>
-              <a
+              <NavLink to="/presentation" className="px-8 py-4 bg-gray-100 text-gray-700 font-medium rounded-2xl hover:bg-gray-200 transition-colors">Презентация для инвесторов</NavLink>
+              {/* <a
                 href="presentation.html"
                 className="px-8 py-4 bg-gray-100 text-gray-700 font-medium rounded-2xl hover:bg-gray-200 transition-colors"
               >
                 Презентация для инвесторов
-              </a>
+              </a> */}
             </div>
           </div>
         </section>
@@ -487,12 +493,12 @@ const Landing = () => {
                 >
                   О нас
                 </a>
-                <a
-                  href="presentation.html"
+                <NavLink
+                  to="/presentation"
                   className="hover:text-gray-900 transition-colors"
                 >
                   Для инвесторов
-                </a>
+                </NavLink>
               </div>
               <div className="text-sm text-gray-400">
                 © 2026 AgroHub. YouCanCode Team.

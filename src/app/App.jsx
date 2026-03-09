@@ -1,13 +1,14 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Header from "../pages/Header";
+import { Header } from "../shared";
 import Landing from "../pages/Landing";
 import { CustomerHome } from "../pages/CustomerHome";
 import { SellerHome } from "../pages/SellerHome";
 import Catalog from "../pages/Catalog";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import { Presentation } from "../pages/Presentation";
 export default function App() {
   return (
     <BrowserRouter>
@@ -66,12 +67,15 @@ export default function App() {
             </>
           }
         />
-        {/* 
-        <Route path="/Catalog" element={<Catalog/>}/> 
-
-        <Route path="/Register" element={<Register />} />
-         <Route path="/Login" element={<Login />} />
->>>>>>> Stashed changes */}
+        <Route
+          path="/presentation"
+          element={
+            <>
+              <Header />
+              <Presentation />
+            </>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );
