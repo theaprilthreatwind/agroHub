@@ -1,142 +1,130 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { PageLayout } from "../shared";
 
 const Login = () => {
-    const navigate = useNavigate();
-    const [role, setRole] = useState("user");
+  const navigate = useNavigate();
+  const [role, setRole] = useState("user");
 
-    const [form, setForm] = useState({
-        email: "",
-        password: "",
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
     });
 
-    const [error, setError] = useState("");
-    const [loading, setLoading] = useState(false);
-    const [success, setSuccess] = useState("");
+    setError("");
+  };
 
-    const handleChange = (e) => {
-        setForm({
-            ...form,
-            [e.target.name]: e.target.value,
-        });
+  const handleLogin = () => {
+    e.preventDefault();
 
-        setError("");
-    }; 
+    const user = JSON.parse(localStorage.getItem("user"));
 
-    const handleLogin = () => {
-        e.preventDefault();
+    if (!user) {
+      setError("Пользователь не найден");
+      return;
+    }
 
-        const user = JSON.parse(localStorage.getItem('user'));
+    if (user.email === form.email && user.password === form.password) {
+      setSuccess("Вы успешно за логировались");
+      navigate("/");
+    } else {
+      setError("Неправильный email или пароль");
+    }
 
-        if (!user) {
-            setError("Пользователь не найден");
-            return;
-        }
+    setLoading(true);
 
-        if (user.email === form.email && user.password === form.password) {
-            setSuccess("Вы успешно за логировались")
-            navigate('/');
-        } else {
-            setError("Неправильный email или пароль");
-        };
+    setTimeout(() => {
+      setSuccess(`Добро пожаловать, ${form.name}!`);
 
-        setLoading(true);
+      setForm({
+        name: "",
+        email: "",
+        password: "",
+        farmName: "",
+      });
 
-        setTimeout(() => {
-            setSuccess(`Добро пожаловать, ${form.name}!`);
+      setLoading(false);
+    }, 1000);
+  };
 
-            setForm({
-                name: "",
-                email: "",
-                password: "",
-                farmName: ""
-            });
+  return (
+    <PageLayout>
+      <div className="register-page">
+        <div className="register-box">
+          <h2>Логирование</h2>
 
-            setLoading(false);
+          <div className="role-switch">
+            <button
+              type="button"
+              className={role === "user" ? "role-btn active" : "role-btn"}
+              onClick={() => setRole("user")}
+            >
+              Покупатель
+            </button>
 
-        }, 1000);
-    };
+            <button
+              type="button"
+              className={role === "seller" ? "role-btn active" : "role-btn"}
+              onClick={() => setRole("seller")}
+            >
+              Продавец
+            </button>
+          </div>
 
-    return (
+          <form onSubmit={handleLogin}>
+            <label>Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Введите свой email..."
+              value={form.email}
+              onChange={handleChange}
+            />
 
-        <main>
+            {role === "seller" && (
+              <>
+                <label>Farm name</label>
+                <input
+                  type="text"
+                  name="farmName"
+                  placeholder="Farm name"
+                  value={form.farmName}
+                  onChange={handleChange}
+                />
+              </>
+            )}
 
-            <div className="register-page">
+            <label>Пароль</label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Введите свой пароль"
+              value={form.password}
+              onChange={handleChange}
+            />
 
-                <div className="register-box">
+            {error && <p className="error">{error}</p>}
+            {success && <p className="success">{success}</p>}
 
-                    <h2>Логирование</h2>
-
-                    <div className="role-switch">
-                        <button
-                            type="button"
-                            className={role === "user" ? "role-btn active" : "role-btn"}
-                            onClick={() => setRole("user")}
-                        >
-                            Покупатель
-                        </button>
-
-                        <button
-                            type="button"
-                            className={role === "seller" ? "role-btn active" : "role-btn"}
-                            onClick={() => setRole("seller")}
-                        >
-                            Продавец
-                        </button>
-                    </div>
-
-                    <form onSubmit={handleLogin}>
-
-                        <label>Email</label>
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Введите свой email..."
-                            value={form.email}
-                            onChange={handleChange}
-                        />
-
-                        {role === "seller" && (
-                            <>
-                                <label>Farm name</label>
-                                <input
-                                    type="text"
-                                    name="farmName"
-                                    placeholder="Farm name"
-                                    value={form.farmName}
-                                    onChange={handleChange}
-                                />
-                            </>
-                        )}
-
-                        <label>Пароль</label>
-                        <input
-                            type="password"
-                            name="password"
-                            placeholder="Введите свой пароль"
-                            value={form.password}
-                            onChange={handleChange}
-                        />
-
-                        {error && <p className="error">{error}</p>}
-                        {success && <p className="success">{success}</p>}
-
-                        <button type="submit" disabled={loading}>
-                            {loading ? "Логирование..." : "Логирование"}
-                        </button>
-
-                    </form>
-
-                </div>
-
-            </div>
-
-
-        </main>
-
-    );
-
+            <button type="submit" disabled={loading}>
+              {loading ? "Логирование..." : "Логирование"}
+            </button>
+          </form>
+        </div>
+      </div>
+    </PageLayout>
+  );
 };
 
 export default Login;

@@ -1,12 +1,11 @@
 import { AccountHeader, SellerCatalog } from "../components/seller";
+import { PageLayout } from "../shared";
 
 export function SellerHome() {
   return (
-    <div className=" bg-albaster h-screen w-screen">
-      <div className="max-w-7xl mx-auto pt-32 albaster">
-        <AccountHeader />
-        <SellerCatalog />
-      </div>
-    </div>
+    <PageLayout>
+      <AccountHeader />
+      <SellerCatalog />
+    </PageLayout>
   );
 }

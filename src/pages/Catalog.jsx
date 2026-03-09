@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ProductModal from "../pages/Modal/ProductModal";
+import { PageLayout } from "../shared";
 
 const Catalog = () => {
   const [selected, setSelected] = useState(null);
@@ -111,54 +112,47 @@ const Catalog = () => {
   });
 
   return (
-    <div className=" bg-albaster h-screen w-screen">
-      <div className="max-w-7xl mx-auto pt-32 albaster">
+    <PageLayout className="catalog-page">
+      <h1 className="catalog-title">Каталог товаров</h1>
 
-      <main className="catalog-page">
-        
-        <h1 className="catalog-title">Каталог товаров</h1>
+      <div className="catalog-top">
+        <input
+          className="search"
+          placeholder="Поиск товаров..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
 
-        <div className="catalog-top">
-          <input
-            className="search"
-            placeholder="Поиск товаров..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-
-          <div className="categories">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                className={category === cat ? "category active" : "category"}
-                onClick={() => setCategory(cat)}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div className="catalog-grid">
-          {filtered.map((product) => (
-            <div
-              key={product.id}
-              className="product-card"
-              onClick={() => setSelected(product)}
+        <div className="categories">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              className={category === cat ? "category active" : "category"}
+              onClick={() => setCategory(cat)}
             >
-              <img src={product.image} alt={product.name} />
-
-              <h3>{product.name}</h3>
-
-              <p>{product.price} ₸</p>
-            </div>
+              {cat}
+            </button>
           ))}
         </div>
-
-        <ProductModal product={selected} close={() => setSelected(null)} />
-      </main>
       </div>
-    </div>
+
+      <div className="catalog-grid">
+        {filtered.map((product) => (
+          <div
+            key={product.id}
+            className="product-card"
+            onClick={() => setSelected(product)}
+          >
+            <img src={product.image} alt={product.name} />
+
+            <h3>{product.name}</h3>
+
+            <p>{product.price} ₸</p>
+          </div>
+        ))}
+      </div>
+      <ProductModal product={selected} close={() => setSelected(null)} />
+    </PageLayout>
   );
 };
 
